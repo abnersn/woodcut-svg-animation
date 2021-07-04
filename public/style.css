@@ -9,6 +9,8 @@ html, body {
 
 .characters {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -40,4 +42,13 @@ html, body {
 .saddle {
     width: 34%;
     transform: translate3d(0%, -13%, 0);
+}
+
+.background {
+    width: 500vw;
+    height: 50vh;
+    background:
+        url("svg/cactus_3.svg") repeat round,
+        url("svg/cactus_2.svg") repeat round,
+        url("svg/cactus_1.svg") repeat round;
 }
