@@ -10,7 +10,7 @@
     "svgo": "^2.3.1"
   },
   "scripts": {
-    "optmize": "svgo ./public/svg",
+    "svg-optimize": "svgo ./public/svg",
     "build": "rollup --config",
     "watch": "rollup --config --watch",
     "serve": "http-server -c-1 ./public",

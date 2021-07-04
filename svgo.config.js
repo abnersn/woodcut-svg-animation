@@ -27,6 +27,10 @@ module.exports = {
             params: {
                 attrs: 'stroke.*'
             }
+        },
+        {
+            name: 'removeDimensions',
+            active: true
         }
     ])
 }
