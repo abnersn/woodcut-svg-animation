@@ -13,18 +13,23 @@ html, body {
     height: 100vh;
     display: grid;
     grid:
-        ". . ." 1fr
-        ". main ." .618fr
-        ". . ." 1fr / 1fr .618fr 1fr;
+        ". . ." .618fr
+        ". main ." 1fr
+        ". . ." .618fr / .618fr 1fr .618fr;
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .characters {
+        grid:
+            ". . ." 1fr
+            ". main ." .618fr
+            ". . ." 1fr / 1fr .618fr 1fr;
+    }
 }
 
 .characters > * {
     grid-area: main;
     place-self: center;
-}
-
-.donkey {
-    width: 100%;
 }
 
 .man {
