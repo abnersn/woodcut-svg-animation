@@ -7,24 +7,20 @@ html, body {
     box-sizing: border-box;
 }
 
-.layer {
+.characters {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-areas: "main";
+    grid:
+        ". . ." 1fr
+        ". main ." .618fr
+        ". . ." 1fr / 1fr .618fr 1fr;
 }
 
-.sprite {
+.characters > * {
     grid-area: main;
     place-self: center;
-}
-
-.layer.characters {
-    max-width: 50vw;
-    width: 20rem;
 }
 
 .donkey {
