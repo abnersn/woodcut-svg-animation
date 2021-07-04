@@ -58,6 +58,24 @@ html, body {
     width: 4rem;
 }
 
+.sun {
+    position: fixed;
+    width: 20vmin;
+    top: 1rem;
+    left: calc(50% - 10vmin);
+    transform-origin: 0 140vmin;
+    transform: rotate3d(0, 0, 1, 11deg);
+}
+
+.mountains {
+    left: 0;
+    right: 0;
+    transform: translateY(51%);
+    position: fixed;
+    width: 100vw;
+    height: 30vh;
+    background: url("svg/mountains.svg");
+}
 
 /*******************/
 /* Parallax effect */
@@ -94,12 +112,12 @@ html, body {
 
 .layer.-farthest {
     transform: translate3d(0, -100%, -2px);
-    background-position-x: -33px;
+    background-position-x: -159px;
 }
 
 .layer.-far {
     transform: translate3d(0, -62%, -1px);
-    background-position-x: -3203px;
+    background-position-x: -3003px;
 }
 
 .characters {
@@ -113,5 +131,5 @@ html, body {
 
 .layer.-closest {
     transform: translate3d(0, 0, 2px);
-    background-position-x: -1351px;
+    background-position-x: -1451px;
 }
