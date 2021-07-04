@@ -8,6 +8,7 @@
     "svgo": "^2.3.1"
   },
   "scripts": {
+    "optmize": "svgo ./public/svg",
     "build": "rollup --config"
   },
   "repository": {
