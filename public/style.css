@@ -46,6 +46,12 @@ html, body {
     transform: translate3d(0%, -13%, 0);
 }
 
+.cow {
+    position: absolute;
+    bottom: 0;
+    width: 10rem;
+}
+
 
 /*******************/
 /* Parallax effect */
@@ -86,7 +92,7 @@ html, body {
 }
 
 .layer.-far {
-    transform: translate3d(0, -70%, -1px);
+    transform: translate3d(0, -62%, -1px);
     background-position-x: -3203px;
 }
 
