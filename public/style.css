@@ -8,6 +8,7 @@ html, body {
 }
 
 .characters {
+    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -44,11 +45,26 @@ html, body {
     transform: translate3d(0%, -13%, 0);
 }
 
-.background {
-    width: 500vw;
-    height: 50vh;
+.background,
+.foreground {
+    position: absolute;
+    width: 1000vw;
+    height: 30vh;
     background:
-        url("svg/cactus_3.svg") repeat round,
-        url("svg/cactus_2.svg") repeat round,
-        url("svg/cactus_1.svg") repeat round;
+        url("svg/cactus_1.svg") repeat-x,
+        url("svg/cactus_2.svg") repeat-x,
+        url("svg/cactus_3.svg") repeat-x;
+}
+
+.background {
+    top: 50%;
+    transform: translate3d(0, -70%, 0);
+    background-color: rgba(255, 192, 203, 0.473);
+}
+
+.foreground {
+    bottom: 50%;
+    transform: translate3d(0, 100%, 0);
+    background-position-x: -10000px;
+    background-color: rgba(255, 222, 173, 0.459);
 }
