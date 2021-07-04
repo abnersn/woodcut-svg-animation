@@ -1,18 +1,38 @@
 html, body {
     margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .screen {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-areas: "main";
+    overflow: hidden;
 }
 
 .sprite {
     grid-area: main;
+    place-self: center;
 }
 
 .donkey {
-    place-self: center;
+    width: 30rem;
+}
+
+.man {
+    width: 15rem;
+    transform: translate3d(15%, -23%, 0)
+}
+
+.saddle {
+    width: 10rem;
+    transform: translate3d(1%, 1%, 0);
 }
