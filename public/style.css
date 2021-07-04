@@ -7,15 +7,14 @@ html, body {
     box-sizing: border-box;
 }
 
-.screen {
+.layer {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    margin: auto;
     display: grid;
     grid-template-areas: "main";
-    overflow: hidden;
 }
 
 .sprite {
@@ -23,16 +22,21 @@ html, body {
     place-self: center;
 }
 
+.layer.characters {
+    max-width: 50vw;
+    width: 20rem;
+}
+
 .donkey {
-    width: 30rem;
+    width: 100%;
 }
 
 .man {
-    width: 15rem;
-    transform: translate3d(15%, -23%, 0)
+    width: 56%;
+    transform: translate3d(15%, -23%, 0);
 }
 
 .saddle {
-    width: 10rem;
-    transform: translate3d(1%, 1%, 0);
+    width: 34%;
+    transform: translate3d(0%, -13%, 0);
 }
