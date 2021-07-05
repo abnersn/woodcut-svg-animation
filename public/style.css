@@ -139,6 +139,7 @@ html, body {
     right: 0;
     bottom: 0;
     pointer-events: none;
-    background: var(--paper-color);
+    background-color: var(--paper-color);
     mix-blend-mode: multiply;
+    background-image: url('png/texture.png');
 }

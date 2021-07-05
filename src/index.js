@@ -13,7 +13,7 @@ const paperColor = paperColors[Math.random() * paperColors.length >> 0];
 document.getElementById('paper').style
     .setProperty('--paper-color', paperColor);
 
-gsap.to('.sun', {
-    duration: 10,
-    transform: 'rotate3d(0, 0, 1, 300deg)'
-})
+// gsap.to('.sun', {
+//     duration: 10,
+//     transform: 'rotate3d(0, 0, 1, 300deg)'
+// })
