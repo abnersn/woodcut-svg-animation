@@ -18,8 +18,8 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 10rem;
-    height: 10rem;
+    width: 30vh;
+    height: 30vh;
     margin: auto;
 }
 
@@ -43,14 +43,14 @@ html, body {
 
 .cow {
     position: absolute;
-    bottom: 0;
-    width: 7rem;
+    bottom: 4vh;
+    height: 18vh;
 }
 
 .chicken {
     position: absolute;
     bottom: 0;
-    width: 2rem;
+    height: 8vh;
 }
 
 .sun {
@@ -60,6 +60,10 @@ html, body {
     left: calc(50% - 10vmin);
     transform-origin: 0 140vmin;
     transform: rotate3d(0, 0, 1, 11deg);
+}
+
+@media (min-aspect-ratio: 1/1) {
+
 }
 
 .mountains {
@@ -82,9 +86,8 @@ html, body {
     bottom: 0;
     top: 25vh;
     width: 1000vw;
-    background-color: red;
-    background:
-        url("svg/ground_1.svg"),
+    background-color: white;
+    background: url("svg/ground_1.svg"),
         url("svg/ground_2.svg"),
         url("svg/ground_3.svg"),
         url("svg/ground_4.svg");
