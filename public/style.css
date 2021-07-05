@@ -69,7 +69,10 @@ html, body {
     position: absolute;
     width: 1000vw;
     height: 20vh;
-    background: url("svg/mountains.svg");
+    background:
+        url("svg/mountains_1.svg"),
+        url("svg/mountains_2.svg"),
+        url("svg/mountains_3.svg");
 }
 
 /*******************/
