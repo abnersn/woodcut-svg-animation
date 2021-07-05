@@ -64,15 +64,16 @@ html, body {
 }
 
 .mountains {
-    top: 10vh;
+    top: 7vh;
     left: 0;
     position: absolute;
     width: 1000vw;
-    height: 20vh;
+    height: 26vh;
     background:
-        url("svg/mountains_1.svg"),
-        url("svg/mountains_2.svg"),
-        url("svg/mountains_3.svg");
+        url("svg/mountains_1.svg") repeat-x center bottom,
+        url("svg/mountains_2.svg") repeat-x center bottom,
+        url("svg/mountains_3.svg") repeat-x center bottom,
+        url("svg/mountains_4.svg") repeat-x center bottom;
 }
 
 .floor {
@@ -80,11 +81,14 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 75vh;
+    height: 67vh;
     width: 1000vw;
-    background: 
+    background-color: white;
+    background:
         url("svg/floor_1.svg"),
-        url("svg/floor_2.svg");
+        url("svg/floor_2.svg"),
+        url("svg/floor_3.svg"),
+        url("svg/floor_4.svg");
 }
 
 /*******************/

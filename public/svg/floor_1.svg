@@ -1,3 +1,40 @@
-<svg viewBox="0 0 751 607" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" clip-rule="evenodd">
-    <path d="M201.67 106.152c2.446 0 15.17-1.069 17.012-.216 2.191 1.016 5.587 1.297 7.816 1.297 1.259 0 15.574.945 11.436.945m334.318 187.356c-.011-.158 4.021-.094 4.394-.094 4.292 0 9.344.683 13.567-.128 2.115-.407 4.176-.013 6.3-.751 4.852-1.687 8.146-4.624 13.399-5.286 12.419-1.565 25.28 3.44 37.375 3.44m-578.99 25.921c4.755 0 10.454-.818 15.128 0 2.261.396 3.923 1.412 6.601.841 6.234-1.329 11.648-4.474 18.27-5.088 5.759-.533 10.729 2.195 16.276 2.678 5.105.444 10.226.87 15.346 1.313 1.109.096 5.341 1.158 6.338.234m507.998 184.85c10.498 0 21.222-.566 31.612.538 3.443.366 6.966.289 10.392.796 1.21.179 4.844-.764 3.46-.764m-597.912 45.54c2.827 1.459 9.45.188 12.508.188 10.132 0 23.422-1.547 33.874 0 8.773 1.298 15.679 3.58 25.086 3.58 1.562 0 8.121.526 8.121-1.771m364.87-434.965c13.882 0 37.413-7.809 48.408-5.53 6.634 1.376 10.873 3.593 18.915 3.593.49 0 7.624.221 7.624-.178" fill="none"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="113"
+   height="127"
+   version="1.1"
+   viewBox="0 0 29.898 33.602"
+   id="svg3940"
+   sodipodi:docname="floor_1.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3944" />
+  <sodipodi:namedview
+     id="namedview3942"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="3.0461435"
+     inkscape:cx="28.068278"
+     inkscape:cy="78.13158"
+     inkscape:window-width="1792"
+     inkscape:window-height="982"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3940" />
+  <path
+     d="M 7.1712793,5.6560205 C 7.0048682,5.5343385 6.948801,5.5535183 8.2660538,5.2814787 8.7874701,5.1737953 9.3207563,5.0403719 9.4511039,4.9849794 c 0.1303606,-0.055391 0.2370074,-0.079214 0.2370074,-0.052938 0,0.15375 -0.322081,0.3403593 -0.9049091,0.5242832 -0.8330156,0.2628746 -1.425158,0.336234 -1.6119618,0.1996985 z"
+     id="path3922"
+     style="stroke-width:0.0729262" />
 </svg>
