@@ -86,11 +86,12 @@ html, body {
     bottom: 0;
     top: 25vh;
     width: 1000vw;
-    background-color: white;
-    background: url("svg/ground_1.svg"),
+    background:
+        url("svg/ground_1.svg"),
         url("svg/ground_2.svg"),
         url("svg/ground_3.svg"),
-        url("svg/ground_4.svg");
+        url("svg/ground_4.svg"),
+        white;
 }
 
 .container {
