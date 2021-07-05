@@ -57,13 +57,16 @@ html, body {
     position: fixed;
     width: 6rem;
     top: 1rem;
-    left: calc(50% - 10vmin);
-    transform-origin: 0 140vmin;
-    transform: rotate3d(0, 0, 1, 11deg);
+    right: 10%;
 }
 
-@media (min-aspect-ratio: 1/1) {
-
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: hidden;
 }
 
 .mountains {
@@ -92,16 +95,6 @@ html, body {
         url("svg/ground_3.svg"),
         url("svg/ground_4.svg"),
         white;
-}
-
-.container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow-y: hidden;
-    overflow-x: scroll;
 }
 
 .layer {

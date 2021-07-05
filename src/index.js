@@ -1,4 +1,8 @@
 import gsap from "gsap";
+import { Circ } from "gsap/gsap-core";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 /* Paper colors */
 const paperColors = [
@@ -13,7 +17,25 @@ const paperColor = paperColors[Math.random() * paperColors.length >> 0];
 document.getElementById('paper').style
     .setProperty('--paper-color', paperColor);
 
+gsap.to('.sun', { rotation: '+=360', duration: 20, repeat: -1, ease: 'none' });
+
+gsap.to('.sun', {
+    scrollTrigger: {
+        scroller: '.container',
+        trigger: 'body',
+        scrub: true
+    },
+    duration: 6,
+    ease: Circ.easeIn,
+    translateY: '30vw'
+});
+
 // gsap.to('.sun', {
+//     scrollTrigger: {
+//         trigger: 'body',
+//         scrub: true
+//     },
 //     duration: 10,
-//     transform: 'rotate3d(0, 0, 1, 300deg)'
-// })
+//     ease: 'none',
+//     translateX: '-200vw'
+// });
