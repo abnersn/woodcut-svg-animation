@@ -56,7 +56,7 @@ html, body {
 
 .sun {
     position: fixed;
-    width: 5rem;
+    width: 6rem;
     top: 1rem;
     left: calc(50% - 10vmin);
     transform-origin: 0 140vmin;
@@ -64,7 +64,7 @@ html, body {
 }
 
 .mountains {
-    top: 7vh;
+    top: 10vh;
     left: 0;
     position: absolute;
     width: 1000vw;
@@ -83,7 +83,7 @@ html, body {
     bottom: 0;
     height: 67vh;
     width: 1000vw;
-    background-color: white;
+    background-color: red;
     background:
         url("svg/floor_1.svg"),
         url("svg/floor_2.svg"),
@@ -91,12 +91,7 @@ html, body {
         url("svg/floor_4.svg");
 }
 
-/*******************/
-/* Parallax effect */
-/*******************/
-
 .container {
-    perspective: 5px;
     position: fixed;
     top: 0;
     right: 0;
@@ -104,13 +99,6 @@ html, body {
     bottom: 0;
     overflow-y: hidden;
     overflow-x: scroll;
-}
-
-.group {
-    width: 1000vw;
-    height: 100vh;
-    position: relative;
-    transform-style: preserve-3d;
 }
 
 .layer {
