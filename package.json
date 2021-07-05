@@ -4,6 +4,7 @@
   "description": "An SVG animation project inspired by woodcut illustration style.",
   "main": "index.js",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "concurrently": "^6.2.0",
     "http-server": "^0.12.3",
     "rollup": "^2.52.7",
@@ -31,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/abnersn/woodcut-svg-animation/issues"
   },
-  "homepage": "https://github.com/abnersn/woodcut-svg-animation#readme"
+  "homepage": "https://github.com/abnersn/woodcut-svg-animation#readme",
+  "dependencies": {
+    "gsap": "^3.7.0"
+  }
 }
