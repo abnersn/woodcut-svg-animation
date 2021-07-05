@@ -2,7 +2,6 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
 }
 
 * {
@@ -130,4 +129,16 @@ html, body {
 .layer.-closest {
     transform: translate3d(0%, 30%, 0);
     background-position-x: 400vw;
+}
+
+.paper {
+    --paper-color: #ff9fb5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: var(--paper-color);
+    mix-blend-mode: multiply;
 }
