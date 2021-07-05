@@ -75,6 +75,18 @@ html, body {
         url("svg/mountains_3.svg");
 }
 
+.floor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 75vh;
+    width: 1000vw;
+    background: 
+        url("svg/floor_1.svg"),
+        url("svg/floor_2.svg");
+}
+
 /*******************/
 /* Parallax effect */
 /*******************/
