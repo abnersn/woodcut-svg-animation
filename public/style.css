@@ -149,8 +149,7 @@ html, body {
 }
 
 .copyright {
-    width: 12vw;
-    display: block;
+    width: 8rem;
     position: fixed;
     right: 0;
     bottom: 0;
