@@ -30,7 +30,7 @@ module.exports = {
         },
         {
             name: 'removeDimensions',
-            active: true
+            active: false
         }
     ])
 }
