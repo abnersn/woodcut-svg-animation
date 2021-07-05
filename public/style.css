@@ -75,7 +75,7 @@ html, body {
         url("svg/mountains_4.svg") repeat-x center bottom;
 }
 
-.floor {
+.ground {
     position: absolute;
     left: 0;
     right: 0;
@@ -84,10 +84,10 @@ html, body {
     width: 1000vw;
     background-color: red;
     background:
-        url("svg/floor_1.svg"),
-        url("svg/floor_2.svg"),
-        url("svg/floor_3.svg"),
-        url("svg/floor_4.svg");
+        url("svg/ground_1.svg"),
+        url("svg/ground_2.svg"),
+        url("svg/ground_3.svg"),
+        url("svg/ground_4.svg");
 }
 
 .container {
