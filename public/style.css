@@ -95,8 +95,8 @@ html, body {
 .layer {
     position: absolute;
     width: 1000vw;
-    height: 20vh;
-    top: calc(67% - 10vh);
+    height: 30vh;
+    top: calc(70% - 15vh);
     background:
         url("svg/cactus_1.svg") repeat-x,
         url("svg/cactus_2.svg") repeat-x,
@@ -104,21 +104,21 @@ html, body {
 }
 
 .layer.-farthest {
-    transform: translate3d(0%, -180%, 0);
-    background-position-x: 283px;
+    transform: translate3d(0%, -120%, 0);
+    background-position-x: 100vw;
 }
 
 .layer.-far {
-    transform: translate3d(0%, -90%, 0);
-    background-position-x: 419px;
+    transform: translate3d(0%, -100%, 0);
+    background-position-x: 200vw;
 }
 
 .layer.-close {
-    transform: translate3d(0%, 40%, 0);
-    background-position-x: 547px;
+    transform: translate3d(0%, -30%, 0);
+    background-position-x: 300vw;
 }
 
 .layer.-closest {
-    transform: translate3d(0%, 100%, 0);
-    background-position-x: 661px;
+    transform: translate3d(0%, 40%, 0);
+    background-position-x: 400vw;
 }
