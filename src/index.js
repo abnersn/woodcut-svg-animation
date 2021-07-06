@@ -94,7 +94,7 @@ async function animate() {
 
     const chickenTimeline = gsap.timeline({
         repeat: -1,
-        repeatDelay: 5
+        repeatDelay: 2
     })
 
     chickenTimeline
