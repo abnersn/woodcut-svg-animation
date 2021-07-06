@@ -128,7 +128,6 @@ async function animate() {
     /** Donkey */
     const idle = gsap.timeline({
         repeat: -1,
-        delay: 1,
         defaults: {
             repeatRefresh: true
         }
@@ -136,7 +135,7 @@ async function animate() {
 
     idle.addLabel('start')
         .to('.donkey #tail', {
-            rotate: '-=5',
+            rotate: -5,
             repeat: 1,
             yoyo: true,
             ease: Sine.easeInOut,
@@ -148,7 +147,7 @@ async function animate() {
             {
                 ease: Sine.easeInOut,
                 duration: 1 / 5,
-                rotate: '+=10',
+                rotate: 10,
                 yoyo: true,
                 repeat: 1,
                 delay: 1 / 3,
@@ -159,7 +158,7 @@ async function animate() {
         .to('.donkey #ear_r', {
             ease: Sine.easeInOut,
             duration: 1 / 5,
-            rotate: '+=10',
+            rotate: 10,
             yoyo: true,
             repeat: 3,
             transformOrigin: 'center bottom'
@@ -169,7 +168,7 @@ async function animate() {
             {
                 ease: Sine.easeInOut,
                 duration: 1 / 5,
-                rotate: '-=5',
+                rotate: -5,
                 yoyo: true,
                 repeat: 1,
                 transformOrigin: 'bottom left'
@@ -181,7 +180,7 @@ async function animate() {
             {
                 ease: Sine.easeInOut,
                 duration: 1 / 2,
-                rotate: '-=8',
+                rotate: -8,
                 yoyo: true,
                 repeat: 3,
                 transformOrigin: 'left bottom'
