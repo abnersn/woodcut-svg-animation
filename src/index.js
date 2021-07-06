@@ -18,25 +18,12 @@ const paperColor = paperColors[Math.random() * paperColors.length >> 0];
 document.getElementById('paper').style
     .setProperty('--paper-color', paperColor);
 
-gsap.to('.sun', { rotation: '+=360', duration: 20, repeat: -1, ease: 'none' });
-
-gsap.to('.sun', {
-    scrollTrigger: {
-        scroller: '.container',
-        trigger: 'body',
-        scrub: true
-    },
-    duration: 6,
-    ease: Circ.easeIn,
-    translateY: '30vw'
+ScrollTrigger.create({
+    trigger: "body",
+    scroller: '.container',
+    start: 0,
+    end: "+=500",
+    onUpdate: self => {
+        console.log("progress:", self.progress.toFixed(3), "direction:", self.direction, "velocity", self.getVelocity());
+    }
 });
-
-// gsap.to('.sun', {
-//     scrollTrigger: {
-//         trigger: 'body',
-//         scrub: true
-//     },
-//     duration: 10,
-//     ease: 'none',
-//     translateX: '-200vw'
-// });

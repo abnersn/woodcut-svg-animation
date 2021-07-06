@@ -67,13 +67,20 @@ html, body {
     right: 0;
     bottom: 0;
     overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.scroller {
+    position: relative;
+    height: 100%;
+    width: 1000vw;
 }
 
 .mountains {
     top: 0;
     left: 0;
     position: absolute;
-    width: 1000vw;
+    width: 100%;
     height: 26vh;
     background:
         url("svg/mountains_1.svg") repeat-x center bottom,
@@ -88,7 +95,7 @@ html, body {
     right: 0;
     bottom: 0;
     top: 25vh;
-    width: 1000vw;
+    width: 100%;
     background:
         url("svg/ground_1.svg"),
         url("svg/ground_2.svg"),
@@ -99,7 +106,7 @@ html, body {
 
 .layer {
     position: absolute;
-    width: 1000vw;
+    width: 100%;
     height: 30vh;
     top: calc(70% - 15vh);
     background:
