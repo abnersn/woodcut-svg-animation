@@ -124,6 +124,89 @@ async function animate() {
             },
             'start'
         )
+
+    /** Donkey */
+    const donkeyTimeline = gsap.timeline({ repeat: -1 })
+
+    donkeyTimeline
+        .addLabel('start')
+        .to('.donkey #tail', {
+            rotate: -5,
+            repeat: 3,
+            yoyo: true,
+            ease: Sine.easeInOut,
+            transformOrigin: 'top right',
+            duration: 1
+        })
+        .to(
+            '.donkey #ear_l',
+            {
+                ease: Sine.easeInOut,
+                duration: 1 / 5,
+                rotate: 10,
+                yoyo: true,
+                repeat: 1,
+                delay: 1 / 3,
+                transformOrigin: 'center bottom'
+            },
+            'start'
+        )
+        .to('.donkey #ear_r', {
+            ease: Sine.easeInOut,
+            duration: 1 / 5,
+            rotate: 10,
+            yoyo: true,
+            repeat: 3,
+            transformOrigin: 'center bottom'
+        })
+        .to(
+            '.donkey #head',
+            {
+                ease: Sine.easeInOut,
+                duration: 1 / 5,
+                rotate: -5,
+                yoyo: true,
+                repeat: 1,
+                transformOrigin: 'bottom left'
+            },
+            '<'
+        )
+        .to(
+            '.donkey #neck',
+            {
+                ease: Sine.easeInOut,
+                duration: 1 / 2,
+                rotate: -8,
+                yoyo: true,
+                repeat: 3,
+                transformOrigin: 'left bottom'
+            },
+            '<'
+        )
+        .to(
+            '.donkey #leg_back_r',
+            {
+                ease: Sine.easeInOut,
+                duration: 1 / 2,
+                rotate: 8,
+                yoyo: true,
+                repeat: 3,
+                transformOrigin: 'center top'
+            },
+            '<'
+        )
+        .to(
+            '.donkey #leg_front_l',
+            {
+                ease: Sine.easeInOut,
+                duration: 1 / 2,
+                rotate: -8,
+                yoyo: true,
+                repeat: 3,
+                transformOrigin: 'center top'
+            },
+            '<+=50%'
+        )
 }
 
 window.addEventListener('load', animate)
