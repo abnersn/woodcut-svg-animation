@@ -56,6 +56,13 @@ async function animate() {
         }
     })
 
+    gsap.to('.sun', {
+        ease: 'none',
+        duration: 30,
+        rotate: '+= 360',
+        repeat: -1
+    })
+
     skyTimeline
         .to('.sun', { ease: Circ.easeIn, translateY: '200%' })
         .to('.sun', { ease: Linear.easeOut, translateX: '-100vw' }, '<')
