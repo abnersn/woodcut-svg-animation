@@ -128,6 +128,7 @@ async function animate() {
     /** Donkey */
     const idle = gsap.timeline({
         repeat: -1,
+        delay: 1,
         defaults: {
             repeatRefresh: true
         }
@@ -186,6 +187,43 @@ async function animate() {
                 transformOrigin: 'left bottom'
             },
             '<'
+        )
+        .to(
+            '.man #arm',
+            {
+                rotate: '+=10%',
+                translateX: '+=5%',
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'top left',
+                duration: 1
+            },
+            'start'
+        )
+        .to(
+            '.man #head',
+            {
+                rotate: '+=4%',
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'center bottom',
+                duration: 1
+            },
+            'start'
+        )
+        .to(
+            '.man #leg',
+            {
+                rotate: '+=4%',
+                repeat: 1,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'top left',
+                duration: 1
+            },
+            'start'
         )
 
     const walk = gsap.timeline({
