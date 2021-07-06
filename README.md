@@ -3,6 +3,8 @@
 
 Demo of advanced animations using Greensock and SVG with illustrations inspired by traditional brazilian woodcutting art.
 
+<img height="200" src="https://github.com/abnersn/woodcut-svg-animation/blob/main/preview.png" />
+
 ## Build
 
 Install the necessary packages and start up the development server.
