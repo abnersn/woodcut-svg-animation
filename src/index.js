@@ -34,7 +34,7 @@ const paperColors = [
     'white',
     '#ffc78d',
     '#cfd2d3',
-    '#afdff8',
+    '#afdff8'
 ]
 
 const paperColor = paperColors[(Math.random() * paperColors.length) >> 0]
@@ -43,6 +43,8 @@ document.getElementById('paper').style.setProperty('--paper-color', paperColor)
 async function animate() {
     await fetchSVG()
 
+    /** Sky */
+
     const skyTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: '.container',
@@ -50,8 +52,8 @@ async function animate() {
             start: 'top left',
             horizontal: true,
             end: 'right right',
-            scrub: true,
-        },
+            scrub: true
+        }
     })
 
     skyTimeline
@@ -60,8 +62,10 @@ async function animate() {
         .to('.night', { ease: Circ.easeOut, translateY: '-20%' }, '-=30%')
         .to('.night', { ease: Linear.easeOut, translateX: '-50vw' }, '<')
 
+    /** Cow */
+
     const cowTimeline = gsap.timeline({
-        repeat: -1,
+        repeat: -1
     })
 
     cowTimeline
@@ -72,7 +76,7 @@ async function animate() {
             rotate: -10,
             transformOrigin: 'right top',
             yoyo: true,
-            repeat: 7,
+            repeat: 7
         })
         .to(
             '.cow #head',
@@ -81,9 +85,37 @@ async function animate() {
                 rotate: 10,
                 duration: 2,
                 yoyo: true,
-                repeat: 3,
+                repeat: 3
             },
             'start += 0.5'
+        )
+
+    /** Chicken */
+
+    const chickenTimeline = gsap.timeline({
+        repeat: -1,
+        repeatDelay: 5
+    })
+
+    chickenTimeline
+        .addLabel('start')
+        .to('.chicken #wing', {
+            rotate: -20,
+            yoyo: true,
+            duration: 1 / 7,
+            repeat: 7,
+            transformOrigin: 'top right'
+        })
+        .to(
+            '.chicken',
+            {
+                duration: 1 / 2,
+                translateY: '-10%',
+                ease: Power2.easeOut,
+                yoyo: true,
+                repeat: 1
+            },
+            'start'
         )
 }
 
