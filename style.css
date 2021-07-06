@@ -1,0 +1,165 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********************************/
+/* Characters initial positioning */
+/**********************************/
+
+.characters {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30vh;
+    height: 30vh;
+    margin: auto;
+}
+
+.characters > * {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.donkey {
+    transform: translate3d(6%, -38%, 0) scale(1.7);
+}
+
+.man {
+    transform: translate3d(10%, -1%, 0) scale(0.6);
+}
+
+.saddle {
+    transform: translate3d(0%, -49%, 0) scale(0.35);
+}
+
+.cow {
+    position: absolute;
+    bottom: 4vh;
+    height: 18vh;
+}
+
+.chicken {
+    position: absolute;
+    bottom: 0;
+    height: 8vh;
+}
+
+.sun {
+    position: fixed;
+    width: 6rem;
+    top: 1rem;
+    right: 1rem;
+}
+
+.night {
+    position: fixed;
+    height: 45vh;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+}
+
+.scroller {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 1000vw;
+}
+
+.mountains {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 26vh;
+    background: url('svg/mountains_1.svg') repeat-x center bottom,
+        url('svg/mountains_2.svg') repeat-x center bottom,
+        url('svg/mountains_3.svg') repeat-x center bottom,
+        url('svg/mountains_4.svg') repeat-x center bottom;
+    filter: drop-shadow(0px -2px 0px white);
+}
+
+.ground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 25vh;
+    width: 100%;
+    background: url('svg/ground_1.svg'), url('svg/ground_2.svg'),
+        url('svg/ground_3.svg'), url('svg/ground_4.svg'), white;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    top: calc(70% - 15vh);
+    background: url('svg/cactus_1.svg') repeat-x,
+        url('svg/cactus_2.svg') repeat-x, url('svg/cactus_3.svg') repeat-x;
+}
+
+.layer.-farthest {
+    transform: translate3d(0%, -120%, 0);
+    background-position-x: 100vw;
+}
+
+.layer.-far {
+    transform: translate3d(0%, -100%, 0);
+    background-position-x: 200vw;
+}
+
+.layer.-close {
+    transform: translate3d(0%, -30%, 0);
+    background-position-x: 300vw;
+}
+
+.layer.-closest {
+    transform: translate3d(0%, 30%, 0);
+    background-position-x: 400vw;
+}
+
+.paper {
+    --paper-color: #ff9fb5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-color: var(--paper-color);
+    mix-blend-mode: multiply;
+    background-image: url('png/texture.png');
+}
+
+.copyright {
+    width: 8rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 0.5rem;
+}
+
+.copyright img {
+    width: 100%;
+}
