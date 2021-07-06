@@ -126,12 +126,17 @@ async function animate() {
         )
 
     /** Donkey */
-    const idle = gsap.timeline({ repeat: -1 })
+    const idle = gsap.timeline({
+        repeat: -1,
+        defaults: {
+            repeatRefresh: true
+        }
+    })
 
     idle.addLabel('start')
         .to('.donkey #tail', {
             rotate: '-=5',
-            repeat: 3,
+            repeat: 1,
             yoyo: true,
             ease: Sine.easeInOut,
             transformOrigin: 'top right',
@@ -184,7 +189,10 @@ async function animate() {
         )
 
     const walk = gsap.timeline({
-        repeat: 12,
+        repeat: 12,,
+        defaults: {
+            repeatRefresh: true
+        },
         scrollTrigger: {
             trigger: '.container',
             scroller: '.scroller',
