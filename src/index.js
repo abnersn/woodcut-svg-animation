@@ -189,7 +189,7 @@ async function animate() {
         )
 
     const walk = gsap.timeline({
-        repeat: 12,,
+        repeat: 12,
         defaults: {
             repeatRefresh: true
         },
