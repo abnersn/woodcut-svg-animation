@@ -1,5 +1,7 @@
 import gsap from "gsap";
 import { Cubic } from "gsap/all";
+import { Linear } from "gsap/gsap-core";
+import { Power2 } from "gsap/gsap-core";
 import { Circ } from "gsap/gsap-core";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -41,67 +43,22 @@ document.getElementById('paper').style
 async function animate() {
     await fetchSVG();
 
-    const sunScrollTrigger = {
-        trigger: ".container",
-        scroller: '.scroller',
-        start: 'top left',
-        markers: true,
-        horizontal: true,
-        end: "+=700%",
-        scrub: true
-    };
-
-    gsap.to('.sun', {
-        scrollTrigger: sunScrollTrigger,
-        ease: 'none',
-        translateX: '-100vw'
+    const skyTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".container",
+            scroller: '.scroller',
+            start: 'top left',
+            horizontal: true,
+            end: "right right",
+            scrub: true
+        }
     });
 
-    gsap.to('.sun', {
-        scrollTrigger: sunScrollTrigger,
-        ease: Circ.easeIn,
-        translateY: '50vw'
-    });
-
-    const nightScrollTrigger = {
-        trigger: ".container",
-        scroller: '.scroller',
-        start: 'top -100%',
-        markers: true,
-        horizontal: true,
-        end: "+=900%",
-        scrub: true
-    };
-
-    gsap.from('.night', {
-        scrollTrigger: nightScrollTrigger,
-        ease: Circ.easeOut,
-        translateY: '10vw'
-    });
-
-    gsap.from('.night', {
-        scrollTrigger: nightScrollTrigger,
-        ease: 'none',
-        translateX: '120vw'
-    });
-
-    gsap.to('.cow #head', {
-        rotate: '+=8',
-        duration: 2,
-        repeatDelay: 1,
-        yoyo: true,
-        ease: Cubic.easeInOut,
-        repeat: -1
-    });
-
-    gsap.to('.cow #tail', {
-        rotate: '-=8',
-        duration: .5,
-        yoyo: true,
-        ease: Cubic.easeInOut,
-        repeat: -1,
-        transformOrigin: 'top right'
-    });
+    skyTimeline
+        .to('.sun', { ease: Circ.easeIn, translateY: '200%' })
+        .to('.sun', { ease: Linear.easeOut, translateX: '-100vw' }, '<')
+        .to('.night', { ease: Circ.easeOut, translateY: '-20%' }, '-=30%')
+        .to('.night', { ease: Linear.easeOut, translateX: '-50vw' }, '<')
 }
 
 window.addEventListener('load', animate);

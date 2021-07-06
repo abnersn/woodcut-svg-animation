@@ -58,15 +58,15 @@ html, body {
     position: fixed;
     width: 6rem;
     top: 1rem;
-    right: 10%;
+    right: 1rem;
 }
 
 .night {
     position: fixed;
     height: 45vh;
-    top: -10vh;
-    left: -10%;
-    transform-origin: left center;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
 }
 
 .scroller {
