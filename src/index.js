@@ -127,6 +127,44 @@ async function animate() {
 
     /** Donkey */
 
+    const idle = gsap.timeline({ repeat: -1 })
+    idle.to(
+        '.donkey #tail',
+        {
+            rotate: -5,
+            yoyo: true,
+            repeat: 3,
+            ease: Sine.easeInOut,
+            transformOrigin: 'top right',
+            duration: 1 / 2
+        },
+        'start'
+    )
+        .to(
+            '.donkey #ear_r',
+            {
+                rotate: -8,
+                repeat: 1,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'center bottom',
+                duration: 1 / 2
+            },
+            'start'
+        )
+        .to(
+            '.donkey #ear_l',
+            {
+                rotate: -16,
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'center bottom',
+                duration: 1 / 4
+            },
+            'start'
+        )
+
     const walk = gsap.timeline({
         repeat: 12,
         scrollTrigger: {
@@ -252,18 +290,6 @@ async function animate() {
             '<'
         )
         .to(
-            '.donkey #tail',
-            {
-                rotate: -5,
-                repeat: 3,
-                yoyo: true,
-                ease: Sine.easeInOut,
-                transformOrigin: 'top right',
-                duration: 1 / 2
-            },
-            'start'
-        )
-        .to(
             '.donkey #neck',
             {
                 rotate: -2,
@@ -284,30 +310,6 @@ async function animate() {
                 ease: Sine.easeInOut,
                 transformOrigin: 'bottom left',
                 duration: 1 / 2
-            },
-            'start'
-        )
-        .to(
-            '.donkey #ear_r',
-            {
-                rotate: -8,
-                repeat: 1,
-                yoyo: true,
-                ease: Sine.easeInOut,
-                transformOrigin: 'center bottom',
-                duration: 1 / 2
-            },
-            'start'
-        )
-        .to(
-            '.donkey #ear_l',
-            {
-                rotate: -16,
-                repeat: 3,
-                yoyo: true,
-                ease: Sine.easeInOut,
-                transformOrigin: 'center bottom',
-                duration: 1 / 4
             },
             'start'
         )
