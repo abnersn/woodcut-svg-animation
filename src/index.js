@@ -135,7 +135,7 @@ async function animate() {
             start: 'top left',
             horizontal: true,
             end: 'right right',
-            scrub: 1
+            scrub: 0.5
         }
     })
 
