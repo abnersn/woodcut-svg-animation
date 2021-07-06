@@ -43,21 +43,21 @@ gsap.to('.sun', {
 const nightScrollTrigger = {
     trigger: ".container",
     scroller: '.scroller',
-    start: 'top -500%',
+    start: 'top -100%',
     markers: true,
     horizontal: true,
-    end: "+=1000%",
+    end: "+=900%",
     scrub: true
 };
 
-gsap.to('.night', {
+gsap.from('.night', {
     scrollTrigger: nightScrollTrigger,
     ease: Circ.easeOut,
-    translateY: '-10vw'
+    translateY: '10vw'
 });
 
-gsap.to('.night', {
+gsap.from('.night', {
     scrollTrigger: nightScrollTrigger,
     ease: 'none',
-    translateX: '-300vw'
+    translateX: '120vw'
 });

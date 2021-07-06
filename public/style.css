@@ -64,8 +64,9 @@ html, body {
 .night {
     position: fixed;
     height: 45vh;
-    top: -16vh;
-    right: -100%;
+    top: -10vh;
+    left: -10%;
+    transform-origin: left center;
 }
 
 .scroller {
