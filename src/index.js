@@ -126,9 +126,9 @@ async function animate() {
         )
 
     /** Donkey */
-    const donkeyTimeline = gsap.timeline({ repeat: -1 })
+    const donkeyIdle = gsap.timeline({ repeat: -1 })
 
-    donkeyTimeline
+    donkeyIdle
         .addLabel('start')
         .to('.donkey #tail', {
             rotate: -5,

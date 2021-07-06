@@ -31,7 +31,7 @@ html, body {
 }
 
 .donkey {
-    transform: translate3d(-22%, 6%, 0) scale(0.9);
+    transform: translate3d(6%, -38%, 0) scale(1.8);
 }
 
 .man {
