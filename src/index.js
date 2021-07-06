@@ -126,7 +126,7 @@ async function animate() {
         )
 
     /** Donkey */
-    const donkeyIdle = gsap.timeline({ repeat: -1 })
+    const donkeyIdle = gsap.timeline({ repeat: -1, paused: true })
 
     donkeyIdle
         .addLabel('start')
@@ -206,6 +206,181 @@ async function animate() {
                 transformOrigin: 'center top'
             },
             '<+=50%'
+        )
+
+    const donkeyWalk = gsap.timeline({ repeat: -1 })
+    donkeyWalk
+        .addLabel('start')
+        .fromTo(
+            '.donkey #leg_front_l',
+            {
+                duration: 1,
+                rotate: -5,
+                transformOrigin: 'center top'
+            },
+            {
+                repeat: 1,
+                ease: Sine.easeInOut,
+                yoyo: true,
+                duration: 1,
+                rotate: 20,
+                transformOrigin: 'center top'
+            }
+        )
+        .to(
+            '.donkey #leg_front_l',
+            {
+                duration: 1 / 2,
+                ease: Sine.easeInOut,
+                translateY: '5%',
+                yoyo: true,
+                repeat: 1
+            },
+            '<'
+        )
+        .fromTo(
+            '.donkey #leg_front_r',
+            {
+                duration: 1,
+                rotate: 8,
+                transformOrigin: 'center top'
+            },
+            {
+                repeat: 1,
+                ease: Sine.easeInOut,
+                yoyo: true,
+                duration: 1,
+                rotate: -10,
+                transformOrigin: 'center top'
+            },
+            'start'
+        )
+        .to(
+            '.donkey #leg_front_r',
+            {
+                duration: 1 / 2,
+                ease: Sine.easeInOut,
+                translateY: '-5%',
+                yoyo: true,
+                repeat: 1
+            },
+            '<'
+        )
+        .fromTo(
+            '.donkey #leg_back_l',
+            {
+                duration: 1,
+                rotate: 20,
+                transformOrigin: 'center top'
+            },
+            {
+                repeat: 1,
+                ease: Sine.easeInOut,
+                yoyo: true,
+                duration: 1,
+                rotate: -5,
+                transformOrigin: 'center top'
+            },
+            'start'
+        )
+        .from(
+            '.donkey #leg_back_l',
+            {
+                duration: 1 / 2,
+                ease: Sine.easeInOut,
+                translateY: '5%',
+                yoyo: true,
+                repeat: 1
+            },
+            '<'
+        )
+        .fromTo(
+            '.donkey #leg_back_r',
+            {
+                duration: 1,
+                rotate: -10,
+                transformOrigin: 'center top'
+            },
+            {
+                repeat: 1,
+                ease: Sine.easeInOut,
+                yoyo: true,
+                duration: 1,
+                rotate: 8,
+                transformOrigin: 'center top'
+            },
+            'start'
+        )
+        .to(
+            '.donkey #leg_back_r',
+            {
+                duration: 1 / 2,
+                ease: Sine.easeInOut,
+                translateY: '2%',
+                yoyo: true,
+                repeat: 1
+            },
+            '<'
+        )
+        .to(
+            '.donkey #tail',
+            {
+                rotate: -5,
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'top right',
+                duration: 1 / 2
+            },
+            'start'
+        )
+        .to(
+            '.donkey #neck',
+            {
+                rotate: -2,
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'bottom left',
+                duration: 1 / 2
+            },
+            'start'
+        )
+        .to(
+            '.donkey #head',
+            {
+                rotate: -2,
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'bottom left',
+                duration: 1 / 2
+            },
+            'start'
+        )
+        .to(
+            '.donkey #ear_r',
+            {
+                rotate: -8,
+                repeat: 1,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'center bottom',
+                duration: 1 / 2
+            },
+            'start'
+        )
+        .to(
+            '.donkey #ear_l',
+            {
+                rotate: -16,
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'center bottom',
+                duration: 1 / 4
+            },
+            'start'
         )
 }
 
