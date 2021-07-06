@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     overflow-y: hidden;
@@ -31,7 +32,7 @@ html, body {
 }
 
 .donkey {
-    transform: translate3d(6%, -38%, 0) scale(1.8);
+    transform: translate3d(6%, -38%, 0) scale(1.7);
 }
 
 .man {
@@ -91,11 +92,10 @@ html, body {
     position: absolute;
     width: 100%;
     height: 26vh;
-    background:
-        url("svg/mountains_1.svg") repeat-x center bottom,
-        url("svg/mountains_2.svg") repeat-x center bottom,
-        url("svg/mountains_3.svg") repeat-x center bottom,
-        url("svg/mountains_4.svg") repeat-x center bottom;
+    background: url('svg/mountains_1.svg') repeat-x center bottom,
+        url('svg/mountains_2.svg') repeat-x center bottom,
+        url('svg/mountains_3.svg') repeat-x center bottom,
+        url('svg/mountains_4.svg') repeat-x center bottom;
     filter: drop-shadow(0px -2px 0px white);
 }
 
@@ -106,12 +106,8 @@ html, body {
     bottom: 0;
     top: 25vh;
     width: 100%;
-    background:
-        url("svg/ground_1.svg"),
-        url("svg/ground_2.svg"),
-        url("svg/ground_3.svg"),
-        url("svg/ground_4.svg"),
-        white;
+    background: url('svg/ground_1.svg'), url('svg/ground_2.svg'),
+        url('svg/ground_3.svg'), url('svg/ground_4.svg'), white;
 }
 
 .layer {
@@ -119,10 +115,8 @@ html, body {
     width: 100%;
     height: 30vh;
     top: calc(70% - 15vh);
-    background:
-        url("svg/cactus_1.svg") repeat-x,
-        url("svg/cactus_2.svg") repeat-x,
-        url("svg/cactus_3.svg") repeat-x;
+    background: url('svg/cactus_1.svg') repeat-x,
+        url('svg/cactus_2.svg') repeat-x, url('svg/cactus_3.svg') repeat-x;
 }
 
 .layer.-farthest {
@@ -163,7 +157,7 @@ html, body {
     position: fixed;
     right: 0;
     bottom: 0;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
 }
 
 .copyright img {

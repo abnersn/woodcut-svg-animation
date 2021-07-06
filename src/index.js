@@ -207,7 +207,7 @@ async function animate() {
             '<+=50%'
         )
 
-    const walk = gsap.timeline({ repeat: -1 })
+    const walk = gsap.timeline({ repeat: -1, paused: true })
     walk.addLabel('start')
         .fromTo(
             '.donkey #leg_front_l',
@@ -377,6 +377,54 @@ async function animate() {
                 ease: Sine.easeInOut,
                 transformOrigin: 'center bottom',
                 duration: 1 / 4
+            },
+            'start'
+        )
+        .to(
+            '.characters',
+            {
+                translateY: '-2%',
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'center bottom',
+                duration: 1 / 2
+            },
+            'start'
+        )
+        .to(
+            '.man #arm',
+            {
+                rotate: '4%',
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'top left',
+                duration: 1 / 2
+            },
+            'start'
+        )
+        .to(
+            '.man #head',
+            {
+                rotate: '4%',
+                repeat: 3,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'center bottom',
+                duration: 1 / 3
+            },
+            'start'
+        )
+        .to(
+            '.man #leg',
+            {
+                rotate: '4%',
+                repeat: 1,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                transformOrigin: 'top left',
+                duration: 1 / 3
             },
             'start'
         )
