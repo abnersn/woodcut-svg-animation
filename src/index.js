@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { Cubic } from "gsap/all";
+import { Sine } from "gsap/gsap-core";
 import { Linear } from "gsap/gsap-core";
 import { Power2 } from "gsap/gsap-core";
 import { Circ } from "gsap/gsap-core";
@@ -58,7 +59,16 @@ async function animate() {
         .to('.sun', { ease: Circ.easeIn, translateY: '200%' })
         .to('.sun', { ease: Linear.easeOut, translateX: '-100vw' }, '<')
         .to('.night', { ease: Circ.easeOut, translateY: '-20%' }, '-=30%')
-        .to('.night', { ease: Linear.easeOut, translateX: '-50vw' }, '<')
+        .to('.night', { ease: Linear.easeOut, translateX: '-50vw' }, '<');
+    
+    const cowTimeline = gsap.timeline({
+        repeat: -1
+    });
+
+    cowTimeline
+        .addLabel('start')
+        .to('.cow #tail', { duration: 1, ease: Sine.easeInOut, rotate: -10, transformOrigin: 'right top', yoyo: true, repeat: 7 })
+        .to('.cow #head', { ease: Sine.easeInOut, rotate: 10, duration: 2, yoyo: true, repeat: 3 }, 'start += 0.5')
 }
 
 window.addEventListener('load', animate);
