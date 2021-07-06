@@ -126,10 +126,9 @@ async function animate() {
         )
 
     /** Donkey */
-    const donkeyIdle = gsap.timeline({ repeat: -1, paused: true })
+    const idle = gsap.timeline({ repeat: -1, paused: true })
 
-    donkeyIdle
-        .addLabel('start')
+    idle.addLabel('start')
         .to('.donkey #tail', {
             rotate: -5,
             repeat: 3,
@@ -208,9 +207,8 @@ async function animate() {
             '<+=50%'
         )
 
-    const donkeyWalk = gsap.timeline({ repeat: -1 })
-    donkeyWalk
-        .addLabel('start')
+    const walk = gsap.timeline({ repeat: -1 })
+    walk.addLabel('start')
         .fromTo(
             '.donkey #leg_front_l',
             {
