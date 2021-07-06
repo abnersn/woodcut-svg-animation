@@ -126,125 +126,16 @@ async function animate() {
         )
 
     /** Donkey */
-    const idle = gsap.timeline({
-        repeat: -1,
-        defaults: {
-            repeatRefresh: true
-        }
-    })
-
-    idle.addLabel('start')
-        .to('.donkey #tail', {
-            rotate: -5,
-            repeat: 1,
-            yoyo: true,
-            ease: Sine.easeInOut,
-            transformOrigin: 'top right',
-            duration: 1
-        })
-        .to(
-            '.donkey #ear_l',
-            {
-                ease: Sine.easeInOut,
-                duration: 1 / 5,
-                rotate: 10,
-                yoyo: true,
-                repeat: 1,
-                delay: 1 / 3,
-                transformOrigin: 'center bottom'
-            },
-            'start'
-        )
-        .to('.donkey #ear_r', {
-            ease: Sine.easeInOut,
-            duration: 1 / 5,
-            rotate: 10,
-            yoyo: true,
-            repeat: 3,
-            transformOrigin: 'center bottom'
-        })
-        .to(
-            '.donkey #head',
-            {
-                ease: Sine.easeInOut,
-                duration: 1 / 5,
-                rotate: -5,
-                yoyo: true,
-                repeat: 1,
-                transformOrigin: 'bottom left'
-            },
-            '<'
-        )
-        .to(
-            '.donkey #neck',
-            {
-                ease: Sine.easeInOut,
-                duration: 1 / 2,
-                rotate: -8,
-                yoyo: true,
-                repeat: 3,
-                transformOrigin: 'left bottom'
-            },
-            '<'
-        )
-        .to(
-            '.man #arm',
-            {
-                rotate: '+=10%',
-                translateX: '+=5%',
-                repeat: 3,
-                yoyo: true,
-                ease: Sine.easeInOut,
-                transformOrigin: 'top left',
-                duration: 1
-            },
-            'start'
-        )
-        .to(
-            '.man #head',
-            {
-                rotate: '+=4%',
-                repeat: 3,
-                yoyo: true,
-                ease: Sine.easeInOut,
-                transformOrigin: 'center bottom',
-                duration: 1
-            },
-            'start'
-        )
-        .to(
-            '.man #leg',
-            {
-                rotate: '+=4%',
-                repeat: 1,
-                yoyo: true,
-                ease: Sine.easeInOut,
-                transformOrigin: 'top left',
-                duration: 1
-            },
-            'start'
-        )
 
     const walk = gsap.timeline({
         repeat: 12,
-        defaults: {
-            repeatRefresh: true
-        },
         scrollTrigger: {
             trigger: '.container',
             scroller: '.scroller',
             start: 'top left',
             horizontal: true,
             end: 'right right',
-            scrub: 0.5,
-            onScrubComplete: () => {
-                idle.play('start')
-            },
-            onUpdate: () => {
-                if (idle.isActive()) {
-                    idle.pause()
-                }
-            }
+            scrub: 1
         }
     })
 
