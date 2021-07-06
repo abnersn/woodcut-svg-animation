@@ -126,7 +126,7 @@ async function animate() {
         )
 
     /** Donkey */
-    const idle = gsap.timeline({ repeat: -1, paused: true })
+    const idle = gsap.timeline({ repeat: -1 })
 
     idle.addLabel('start')
         .to('.donkey #tail', {
@@ -182,32 +182,19 @@ async function animate() {
             },
             '<'
         )
-        .to(
-            '.donkey #leg_back_r',
-            {
-                ease: Sine.easeInOut,
-                duration: 1 / 2,
-                rotate: 8,
-                yoyo: true,
-                repeat: 3,
-                transformOrigin: 'center top'
-            },
-            '<'
-        )
-        .to(
-            '.donkey #leg_front_l',
-            {
-                ease: Sine.easeInOut,
-                duration: 1 / 2,
-                rotate: -8,
-                yoyo: true,
-                repeat: 3,
-                transformOrigin: 'center top'
-            },
-            '<+=50%'
-        )
 
-    const walk = gsap.timeline({ repeat: -1, paused: true })
+    const walk = gsap.timeline({
+        repeat: 12,
+        scrollTrigger: {
+            trigger: '.container',
+            scroller: '.scroller',
+            start: 'top left',
+            horizontal: true,
+            end: 'right right',
+            scrub: true
+        }
+    })
+
     walk.addLabel('start')
         .fromTo(
             '.donkey #leg_front_l',
