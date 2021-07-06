@@ -13,6 +13,7 @@ html, body {
 /**********************************/
 
 .characters {
+    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -60,6 +61,13 @@ html, body {
     right: 10%;
 }
 
+.night {
+    position: fixed;
+    height: 45vh;
+    top: -16vh;
+    right: -100%;
+}
+
 .scroller {
     position: fixed;
     top: 0;
@@ -87,6 +95,7 @@ html, body {
         url("svg/mountains_2.svg") repeat-x center bottom,
         url("svg/mountains_3.svg") repeat-x center bottom,
         url("svg/mountains_4.svg") repeat-x center bottom;
+    filter: drop-shadow(0px -2px 0px white);
 }
 
 .ground {

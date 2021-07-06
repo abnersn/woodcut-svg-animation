@@ -18,17 +18,46 @@ const paperColor = paperColors[Math.random() * paperColors.length >> 0];
 document.getElementById('paper').style
     .setProperty('--paper-color', paperColor);
 
-ScrollTrigger.create({
-    trigger: ".scroller",
-    scroller: '.container',
+const sunScrollTrigger = {
+    trigger: ".container",
+    scroller: '.scroller',
     start: 'top left',
-    end: "+=500",
-    onToggle: self => console.log("toggled, isActive:", self.isActive),
-    onUpdate: self => {
-        console.log(
-            "progress:", self.progress.toFixed(3),
-            "direction:", self.direction,
-            "velocity", self.getVelocity()
-        );
-    }
+    markers: true,
+    horizontal: true,
+    end: "+=700%",
+    scrub: true
+};
+
+gsap.to('.sun', {
+    scrollTrigger: sunScrollTrigger,
+    ease: 'none',
+    translateX: '-100vw'
+});
+
+gsap.to('.sun', {
+    scrollTrigger: sunScrollTrigger,
+    ease: Circ.easeIn,
+    translateY: '50vw'
+});
+
+const nightScrollTrigger = {
+    trigger: ".container",
+    scroller: '.scroller',
+    start: 'top -500%',
+    markers: true,
+    horizontal: true,
+    end: "+=1000%",
+    scrub: true
+};
+
+gsap.to('.night', {
+    scrollTrigger: nightScrollTrigger,
+    ease: Circ.easeOut,
+    translateY: '-10vw'
+});
+
+gsap.to('.night', {
+    scrollTrigger: nightScrollTrigger,
+    ease: 'none',
+    translateX: '-300vw'
 });
