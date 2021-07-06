@@ -6,6 +6,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.0",
     "concurrently": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "http-server": "^0.12.3",
     "prettier": "^2.3.2",
     "rollup": "^2.52.7",
@@ -13,6 +14,8 @@
   },
   "scripts": {
     "svg-optimize": "svgo ./public/svg",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "rollup --config",
     "watch": "rollup --config --watch",
     "serve": "http-server -c-1 ./public",
@@ -33,7 +36,7 @@
   "bugs": {
     "url": "https://github.com/abnersn/woodcut-svg-animation/issues"
   },
-  "homepage": "https://github.com/abnersn/woodcut-svg-animation#readme",
+  "homepage": "http://abnersn.github.io/woodcut-svg-animation",
   "dependencies": {
     "gsap": "^3.7.0"
   }
