@@ -13,6 +13,7 @@ const paperColors = [
     '#cfd2d3',
     '#afdff8'
 ];
+
 const paperColor = paperColors[Math.random() * paperColors.length >> 0];
 document.getElementById('paper').style
     .setProperty('--paper-color', paperColor);

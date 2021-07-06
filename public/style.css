@@ -146,5 +146,9 @@ html, body {
     position: fixed;
     right: 0;
     bottom: 0;
-    padding: .5rem;
+    padding: 1rem .5rem;
+}
+
+.copyright img {
+    width: 100%;
 }
