@@ -60,7 +60,7 @@ html, body {
     right: 10%;
 }
 
-.container {
+.scroller {
     position: fixed;
     top: 0;
     left: 0;
@@ -70,7 +70,7 @@ html, body {
     overflow-x: scroll;
 }
 
-.scroller {
+.container {
     position: relative;
     height: 100%;
     width: 1000vw;

@@ -19,11 +19,16 @@ document.getElementById('paper').style
     .setProperty('--paper-color', paperColor);
 
 ScrollTrigger.create({
-    trigger: "body",
+    trigger: ".scroller",
     scroller: '.container',
-    start: 0,
+    start: 'top left',
     end: "+=500",
+    onToggle: self => console.log("toggled, isActive:", self.isActive),
     onUpdate: self => {
-        console.log("progress:", self.progress.toFixed(3), "direction:", self.direction, "velocity", self.getVelocity());
+        console.log(
+            "progress:", self.progress.toFixed(3),
+            "direction:", self.direction,
+            "velocity", self.getVelocity()
+        );
     }
 });
