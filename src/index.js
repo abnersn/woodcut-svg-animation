@@ -1,5 +1,4 @@
 import gsap from 'gsap'
-import { Cubic } from 'gsap/all'
 import { Sine } from 'gsap/gsap-core'
 import { Linear } from 'gsap/gsap-core'
 import { Power2 } from 'gsap/gsap-core'
