@@ -1,9 +1,9 @@
-const { extendDefaultPlugins } = require('svgo');
+const { extendDefaultPlugins } = require('svgo')
 module.exports = {
     multipass: true,
     js2svg: {
         indent: 4, // string with spaces or number of spaces. 4 by default
-        pretty: true, // boolean, false by default
+        pretty: true // boolean, false by default
     },
     plugins: extendDefaultPlugins([
         {
@@ -25,7 +25,7 @@ module.exports = {
         {
             name: 'removeAttrs',
             params: {
-                attrs: 'stroke.*'
+                attrs: '(width="100%"|stroke.*)'
             }
         },
         {
