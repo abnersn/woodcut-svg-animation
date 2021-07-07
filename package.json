@@ -15,7 +15,7 @@
   "scripts": {
     "svg-optimize": "svgo ./public/svg",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d public",
     "build": "rollup --config",
     "watch": "rollup --config --watch",
     "serve": "http-server -c-1 ./public",
